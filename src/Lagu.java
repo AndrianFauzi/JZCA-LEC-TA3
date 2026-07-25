@@ -1,39 +1,37 @@
+/*
+ * Class Lagu
+ * Digunakan untuk menyimpan data sebuah lagu,
+ * yaitu judul, artis, dan durasi.
+ */
 public class Lagu {
-    //===ATRIBUT===
+    // Atribut
     private String judul;
     private String artis;
-    private int durasi; //dalam hitungan detik
-
-    //===CONSTRUCTOR===
-    public Lagu(String judul, String artis, int durasi) {
+    private double durasi;
+    // Constructor
+    public Lagu(String judul, String artis, double durasi) {
         this.judul = judul;
         this.artis = artis;
         this.durasi = durasi;
     }
-
-    //===GETTER===
+    // Getter
     public String getJudul() {
         return judul;
     }
-
     public String getArtis() {
         return artis;
     }
-
-    public int getDurasi() {
+    public double getDurasi() {
         return durasi;
     }
-
-    //tampilan dalam format menit:detik (mm:ss)
-    public String getDurasiFormatted() {
-        int menit = durasi / 60;
-        int detik = durasi % 60;
-        return String.format("%d:%02d", menit, detik);
-    }
-
-    //Override agar format rapih
+    // Menampilkan informasi lagu
     @Override
     public String toString() {
-        return judul +  " - " + artis + " (" + getDurasiFormatted() + ")";
+        return String.format(
+                "%s - %s (%.2f menit)",
+                judul,
+                artis,
+                durasi
+        );
     }
 }

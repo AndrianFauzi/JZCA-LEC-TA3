@@ -1,32 +1,40 @@
-import java.util.ArrayList;
-
+/*
+ * Class DataLagu
+ * Digunakan untuk menyediakan data playlist lagu HIVI!
+ * untuk eksperimen n = 3, n = 5, dan n = 10.
+ */
 public class DataLagu {
-
-    //DATA TESTING 3 LAGU
-    public static ArrayList<Lagu> buatPlaylist3() {
-        ArrayList<Lagu> playlist = new ArrayList<>();
-        playlist.add(new Lagu("Bohemian Rhapsody", "Queen", 355));
-        playlist.add(new Lagu("Shape of You",  "Ed Sheeran", 234));
-        playlist.add(new Lagu("Blinding Light", "The Weeknd", 200));
-        return playlist;
+    // Data testing 3 lagu
+    public static Lagu[] buatPlaylist3() {
+        return new Lagu[] {
+                new Lagu("Remaja", "HIVI!", 3.38),
+                new Lagu("Siapkah Kau 'Tuk Jatuh Cinta Lagi", "HIVI!", 4.06),
+                new Lagu("Pelangi", "HIVI!", 3.42)
+        };
     }
-
-    //DATA TESTING 5 LAGU
-    public static ArrayList<Lagu> buatPlaylist5() {
-        ArrayList<Lagu> playlist = buatPlaylist3();
-        playlist.add(new Lagu ("Someone Like You", "Adele", 284));
-        playlist.add(new Lagu ("Uptown Funk", "Bruno Mars", 269));
-        return playlist;
+    // Data testing 5 lagu
+    public static Lagu[] buatPlaylist5() {
+        return new Lagu[] {
+                new Lagu("Remaja", "HIVI!", 3.38),
+                new Lagu("Siapkah Kau 'Tuk Jatuh Cinta Lagi", "HIVI!", 4.06),
+                new Lagu("Pelangi", "HIVI!", 3.42),
+                new Lagu("Mata Ke Hati", "HIVI!", 3.48),
+                new Lagu("Orang Ke 3", "HIVI!", 4.02)
+        };
     }
-
-    //DATA TESTING 10 LAGU
-    public static ArrayList<Lagu> buatPlaylist10() {
-        ArrayList<Lagu> playlist = buatPlaylist5();
-        playlist.add(new Lagu ("Clair de Lune", "Debussy", 312));
-        playlist.add(new Lagu ("Earth Song", "Michael Jackson", 404));
-        playlist.add(new Lagu ("Rolling in the Deep", "Adele", 228));
-        playlist.add(new Lagu ("Perahu Kertas", "Maudy Ayunda", 235));
-        playlist.add(new Lagu ("Elder Flower", "HIGE DANDISM", 292));
-        return playlist;
+    // Data testing 10 lagu
+    public static Lagu[] buatPlaylist10() {
+        return new Lagu[] {
+                new Lagu("Remaja", "HIVI!", 3.38),
+                new Lagu("Siapkah Kau 'Tuk Jatuh Cinta Lagi", "HIVI!", 4.06),
+                new Lagu("Pelangi", "HIVI!", 3.42),
+                new Lagu("Mata Ke Hati", "HIVI!", 3.48),
+                new Lagu("Orang Ke 3", "HIVI!", 4.02),
+                new Lagu("Kereta Kencan", "HIVI!", 4.10),
+                new Lagu("Sama-Sama Tahu", "HIVI!", 3.52),
+                new Lagu("Tersenyum, Untuk Siapa?", "HIVI!", 3.45),
+                new Lagu("Musim Hujan", "HIVI!", 3.56),
+                new Lagu("Bumi dan Bulan", "HIVI!", 4.15)
+        };
     }
 }
